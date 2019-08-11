@@ -1,0 +1,36 @@
+{
+  "name": "scrappers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cheerio": "^0.22.13",
+    "@types/dotenv": "^6.1.1",
+    "@types/mongoose": "^5.5.12",
+    "@types/puppeteer": "^1.19.0",
+    "@types/request-promise": "^4.1.44",
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "date-format": "^2.1.0",
+    "dotenv": "^8.0.0",
+    "image-downloader": "^3.5.0",
+    "mongoose": "^5.6.9",
+    "neo4j-driver": "^1.7.5",
+    "puppeteer": "^1.19.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
