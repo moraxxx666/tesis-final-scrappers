@@ -5,9 +5,9 @@ import {Session, Driver} from 'neo4j-driver/types/v1';
 dotenv.config();
 
 class Neo4jDB{
-    URI:string = `${process.env.URI_NEO4J}`;
-    USUARIO:string = `${process.env.NEO4J_USER}`;
-    CONTRASENA: string = `${process.env.NEO4J_PASSWORD}`;
+    URI:string =  'bolt://192.168.137.3';
+    USUARIO:string =  'neo4j';
+    CONTRASENA: string =  'mora';
     SESSION: Session;
     DRIVER: Driver;
     AUTH: neo4j.AuthToken;
@@ -15,6 +15,9 @@ class Neo4jDB{
         this.AUTH = neo4j.auth.basic(this.USUARIO,this.CONTRASENA);
         this.DRIVER = neo4j.driver(this.URI,this.AUTH);
         this.SESSION = this.DRIVER.session();
+        if(this.SESSION){
+            console.log("Neo4j is connect");
+        }else console.log("Error al conectar");
 
     }
     async Run(consulta:string){
@@ -27,4 +30,5 @@ class Neo4jDB{
     }
 
 }
+
 export default Neo4jDB;
